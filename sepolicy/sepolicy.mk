@@ -12,4 +12,5 @@ BOARD_SEPOLICY_UNION += \
     fs_use \
     genfs_contexts \
     installd.te \
+    vold.te \
     mac_permissions.xml
