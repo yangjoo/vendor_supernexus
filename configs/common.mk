@@ -82,6 +82,27 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# Live wallpapers
+PRODUCT_PACKAGES += \
+    Galaxy4 \
+    HoloSpiralWallpaper \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    MagicSmokeWallpapers \
+    NoiseField \
+    PhaseBeam \
+    VisualizationWallpapers \
+    PhotoTable
+
+# VideoEditor
+PRODUCT_PACKAGES += \
+    VideoEditor \
+    libvideoeditor_jni \
+    libvideoeditor_core \
+    libvideoeditor_osal \
+    libvideoeditor_videofilters \
+    libvideoeditorplayer
+
 # Inherit common SuperNexus SELinux Policies
 -include vendor/supernexus/sepolicy/sepolicy.mk
 
