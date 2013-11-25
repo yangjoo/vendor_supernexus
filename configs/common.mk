@@ -2,6 +2,10 @@
 PRODUCT_PACKAGE_OVERLAYS += vendor/supernexus/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/supernexus/overlay/dictionaries
 
+# Superuser
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.supernexus.superuser
+
 # Common product property overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -102,6 +106,15 @@ PRODUCT_PACKAGES += \
     libvideoeditor_osal \
     libvideoeditor_videofilters \
     libvideoeditorplayer
+
+# Superuser
+PRODUCT_PACKAGES += \
+    Superuser \
+    su
+
+# Enable root access on every build
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
 
 # Inherit common SuperNexus SELinux Policies
 -include vendor/supernexus/sepolicy/sepolicy.mk
