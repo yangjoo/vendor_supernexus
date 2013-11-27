@@ -112,9 +112,9 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Enable root access on every build
+# Enable root for Apps + ADB 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=1
+    persist.sys.root_access=3
 
 # Inherit common SuperNexus SELinux Policies
 -include vendor/supernexus/sepolicy/sepolicy.mk
