@@ -107,8 +107,9 @@ PRODUCT_PACKAGES += \
     libvideoeditor_videofilters \
     libvideoeditorplayer
 
-# Superuser
+# Superuser & Busybox
 PRODUCT_PACKAGES += \
+    Busybox \
     Superuser \
     su
 
