@@ -2,10 +2,6 @@
 PRODUCT_PACKAGE_OVERLAYS += vendor/supernexus/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/supernexus/overlay/dictionaries
 
-# Superuser
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.supernexus.superuser
-
 # Common product property overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -50,6 +46,14 @@ PRODUCT_COPY_FILES += \
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/supernexus/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+
+# SuperSU (Root) support
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
+    vendor/supernexus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/supernexus/prebuilt/common/etc/.installed_su_daemon:system/etc/.installed_su_daemon \
+    vendor/supernexus/prebuilt/common/xbin/daemonsu:system/xbin/daemonsu \
+    vendor/supernexus/prebuilt/common/xbin/su:system/xbin/su
 
 # Required SuperNexus Packages
 PRODUCT_PACKAGES += \
@@ -107,15 +111,9 @@ PRODUCT_PACKAGES += \
     libvideoeditor_videofilters \
     libvideoeditorplayer
 
-# Superuser & Busybox
+# Busybox
 PRODUCT_PACKAGES += \
-    Busybox \
-    Superuser \
-    su
-
-# Enable root for Apps + ADB 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3
+    Busybox
 
 # Inherit common SuperNexus SELinux Policies
 -include vendor/supernexus/sepolicy/sepolicy.mk
