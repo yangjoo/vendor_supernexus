@@ -13,6 +13,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
+# Include SuperNexus boot animation
+ifneq ($(SUPERNEXUS_BOOTANIMATION_NAME),)
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/bootanimation/$(SUPERNEXUS_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/bootanimation/BOOTANIMATION-800x480.zip:system/media/bootanimation.zip
+endif
+
 # Enable SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
