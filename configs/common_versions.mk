@@ -1,7 +1,7 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	BUILD_DISPLAY_ID=KRT16M \
-	BUILD_ID=KRT16M \
+	BUILD_DISPLAY_ID=KOT49H \
+	BUILD_ID=KOT49H \
 	BUILD_UTC_DATE=0
 
 # SuperNexus branding
