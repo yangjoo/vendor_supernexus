@@ -1,3 +1,13 @@
+add_lunch_combo galaxysmtd-userdebug
+add_lunch_combo i777-userdebug
 add_lunch_combo i9100-userdebug
+add_lunch_combo i9100g-userdebug
 add_lunch_combo i9300-userdebug
+add_lunch_combo i9305-userdebug
+add_lunch_combo jflteatt-userdebug
+add_lunch_combo jfltetmo-userdebug
+add_lunch_combo jflteusc-userdebug
+add_lunch_combo jfltevzw-userdebug
 add_lunch_combo jfltexx-userdebug
+add_lunch_combo n7000-userdebug
+add_lunch_combo n7100-userdebug
