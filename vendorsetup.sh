@@ -5,6 +5,7 @@ add_lunch_combo i9100g-userdebug
 add_lunch_combo i9300-userdebug
 add_lunch_combo i9305-userdebug
 add_lunch_combo jflteatt-userdebug
+add_lunch_combo jfltespr-userdebug
 add_lunch_combo jfltetmo-userdebug
 add_lunch_combo jflteusc-userdebug
 add_lunch_combo jfltevzw-userdebug
