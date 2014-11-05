@@ -56,6 +56,17 @@ PRODUCT_COPY_FILES += \
     vendor/supernexus/prebuilt/common/xbin/daemonsu:system/xbin/daemonsu \
     vendor/supernexus/prebuilt/common/xbin/su:system/xbin/su
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/supernexus/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/supernexus/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/supernexus/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+
 # Add korean keypad
 PRODUCT_COPY_FILES += \
     vendor/supernexus/prebuilt/common/app/AxT9IME.apk:system/app/AxT9IME.apk \
