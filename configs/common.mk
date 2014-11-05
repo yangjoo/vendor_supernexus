@@ -24,7 +24,7 @@ endif
 
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 endif
 
 # init.d support
