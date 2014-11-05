@@ -64,6 +64,20 @@ PRODUCT_COPY_FILES += \
     vendor/supernexus/prebuilt/common/xbin/daemonsu:system/xbin/daemonsu \
     vendor/supernexus/prebuilt/common/xbin/su:system/xbin/su
 
+# Add korean keypad
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/app/AxT9IME.apk:system/app/AxT9IME.apk \
+    vendor/supernexus/prebuilt/common/lib/libDHWR.so:system/lib/libDHWR.so \
+    vendor/supernexus/prebuilt/common/lib/libDWP.so:system/lib/libDWP.so \
+    vendor/supernexus/prebuilt/common/lib/libXt9core.so:system/lib/libXt9core.so
+
+# Add Custom fonts
+PRODUCT_COPY_FILES += \
+    vendor/supernexus/prebuilt/common/fonts/DroidSans.ttf:system/fonts/DroidSans.ttf \
+    vendor/supernexus/prebuilt/common/fonts/DroidSans-Bold.ttf:system/fonts/DroidSans-Bold.ttf \
+    vendor/supernexus/prebuilt/common/fonts/DroidSansKorean.ttf:system/fonts/DroidSansKorean.ttf \
+    vendor/supernexus/prebuilt/common/fonts/DroidSansKorean-Bold.ttf:system/fonts/DroidSansKorean-Bold.ttf
+
 # Required SuperNexus Packages
 PRODUCT_PACKAGES += \
     SoundRecorder \
