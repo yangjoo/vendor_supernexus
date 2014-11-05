@@ -22,18 +22,10 @@ PRODUCT_COPY_FILES += \
     vendor/supernexus/prebuilt/common/bootanimation/BOOTANIMATION-800x480.zip:system/media/bootanimation.zip
 endif
 
-# Enable SELinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
-
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/supernexus/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # init.d support
 PRODUCT_COPY_FILES += \
